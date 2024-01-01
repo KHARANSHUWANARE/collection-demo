@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    
+   <bean class="com.myspring.myfirstspring.constructorss.Person" name="person1">
+   <constructor-arg value="123" type="int"/> 
+   <constructor-arg value="omkar" type="String"/>
+   <constructor-arg ref="person2"/>
+   </bean>
+   
+   <bean class="com.myspring.myfirstspring.constructorss.Person2" name="person2">
+   <constructor-arg>
+   <value type="int"> 45</value>
+   </constructor-arg>
+   </bean>
+   
+   <bean class="com.myspring.myfirstspring.constructorss.Addition" name="addition">
+   <constructor-arg>
+   <value>20</value>
+   </constructor-arg>
+   <constructor-arg value="10" type="int"/>
+   </bean>
+        
+</beans>
